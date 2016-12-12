@@ -2,7 +2,7 @@ Lesson 4 - 2 variables
 ========================================================
 
 ```{r}
-getwd()
+
 list.files()
 library(ggplot2) #library of ddplot2 load
 
