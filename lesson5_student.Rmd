@@ -4,9 +4,8 @@ Lesson 5
 ### Multivariate Data
 Notes:
 ```{r}
-setwd('/users/cem.kilicli/udacity_R')
-
-
+library("dplyr")
+library("ggplot2")
 ```
 
 
@@ -21,8 +20,9 @@ Notes:
 Notes:
 
 ```{r Third Qualitative Variable}
-ggplot(aes(x = gender, y = age),
-       data = subset(pf, !is.na(gender))) + geom_histogram()
+ggplot(aes(x = age, y = friend_count), 
+       data = subset(pf, !is.na(gender))) +   geom_line(aes(color = gender), stat = 'summary', fun.y = median)
+
 ```
 
 ***
